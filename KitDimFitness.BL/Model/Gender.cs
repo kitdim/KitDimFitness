@@ -2,6 +2,7 @@
 
 namespace KitDimFitness.BL.Model
 {
+    [Serializable]
     /// <summary>
     /// Пол
     /// </summary>
