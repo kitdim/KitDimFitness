@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitDimFitness.CMD", "KitDimFitness.CMD\KitDimFitness.CMD.csproj", "{E9AADD63-A2EF-4583-BF4F-AEAF068E26FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitDimFitness.BL", "KitDimFitness.BL\KitDimFitness.BL.csproj", "{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitDimFitness.BL", "KitDimFitness.BL\KitDimFitness.BL.csproj", "{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitDimFitness.BLTests", "KitDimFitness.BLTests\KitDimFitness.BLTests.csproj", "{CF9F8F49-5150-4340-8C2C-330E63E17DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,26 @@ Global
 		{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}.Release|x64.Build.0 = Release|Any CPU
 		{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}.Release|x86.ActiveCfg = Release|Any CPU
 		{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}.Release|x86.Build.0 = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|ARM.Build.0 = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|x64.Build.0 = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Debug|x86.Build.0 = Debug|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|ARM.Build.0 = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|ARM64.Build.0 = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|x64.ActiveCfg = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|x64.Build.0 = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF9F8F49-5150-4340-8C2C-330E63E17DF4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
