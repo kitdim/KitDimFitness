@@ -8,8 +8,9 @@ namespace KitDimFitness.BL.Controller
     /// <summary>
     /// Контроллер пользователя приложения.
     /// </summary>
-    public class UserController
+    public class UserController : ControllerBase
     {
+        private const string USERS_FILE_NAME = "users.dat";
         /// <summary>
         /// Пользователь приложения.
         /// </summary>
@@ -25,6 +26,7 @@ namespace KitDimFitness.BL.Controller
         /// <exception cref="ArgumentNullException"></exception>
         public UserController(string userName)
         {
+            
             if (string.IsNullOrWhiteSpace(userName))
             {
                 throw new ArgumentNullException("Имя пользователя не может быть пустым", nameof(userName));
@@ -48,12 +50,7 @@ namespace KitDimFitness.BL.Controller
         /// </summary>
         public void Save()
         {
-            var formatter = new BinaryFormatter();
-
-            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
-            {
-                formatter.Serialize(fs, Users);
-            }
+            Save(USERS_FILE_NAME, Users);
         }
 
         /// <summary>
@@ -62,19 +59,7 @@ namespace KitDimFitness.BL.Controller
         /// <returns></returns>
         private List<User> GetUsersData()
         {
-            var formatter = new BinaryFormatter();
-
-            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
-            {
-                if (fs.Length > 0 && formatter.Deserialize(fs) is List<User> users)
-                {
-                    return users;
-                }
-                else
-                {
-                    return new List<User>();
-                }
-            }
+            return Load<List<User>>(USERS_FILE_NAME);
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
