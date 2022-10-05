@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Resources;
 using KitDimFitness.BL.Controller;
 using KitDimFitness.BL.Model;
 
@@ -8,9 +10,12 @@ namespace KitDimFitness.CMD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Вас приветствует приложение KitDimFitness");
+            var culture = CultureInfo.CreateSpecificCulture("ru-ru");
+            var resourceManager = new ResourceManager("KitDimFitness.CMD.Languages.Messages", typeof(Program).Assembly);
 
-            Console.Write("Введите имя пользователя: ");
+            Console.WriteLine(resourceManager.GetString("Hello"), culture);
+
+            Console.Write(resourceManager.GetString("EnterName"), culture);
             var name = Console.ReadLine();
                        
             var userController = new UserController(name);
