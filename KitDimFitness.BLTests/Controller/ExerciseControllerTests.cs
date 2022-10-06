@@ -10,21 +10,21 @@ using KitDimFitness.BL.Model;
 namespace KitDimFitness.BL.Controller.Tests
 {
     [TestClass()]
-    public class EatingControllerTests
+    public class ExerciseControllerTests
     {
         [TestMethod()]
         public void AddTest()
         {
             var userName = Guid.NewGuid().ToString();
-            var foodName = Guid.NewGuid().ToString();
+            var activityName = Guid.NewGuid().ToString();
             var rnd = new Random();
             var userController = new UserController(userName);
-            var eatingController = new EatingController(userController.CurrentUser);
-            var food = new Food(foodName, rnd.Next(50, 500), rnd.Next(50,500), rnd.Next(50, 500), rnd.Next(50, 500));
+            var exerciseController = new ExerciseController(userController.CurrentUser);
+            var activity = new Activity(activityName, rnd.Next(10,50));
 
-            eatingController.Add(food, 100);
+            exerciseController.Add(activity, DateTime.Now, DateTime.Now.AddHours(1));
 
-            Assert.AreEqual(food.Name, eatingController.Eating.Foods.First().Key.Name);
+            Assert.AreEqual(activity.Name, exerciseController.Activities.First().Name);
         }
     }
 }

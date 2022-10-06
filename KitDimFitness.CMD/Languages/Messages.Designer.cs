@@ -70,7 +70,7 @@ namespace KitDimFitness.CMD.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вас приветствует приложение KitDimFitnes(cт).
+        ///   Looks up a localized string similar to Вас приветствует приложение KitDimFitnes.
         /// </summary>
         public static string Hello {
             get {
