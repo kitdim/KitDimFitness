@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitDimFitness.CMD", "KitDim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitDimFitness.BL", "KitDimFitness.BL\KitDimFitness.BL.csproj", "{BE1D679E-46DD-49DB-965A-CBC6E46F8AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitDimFitness.BLTests", "KitDimFitness.BLTests\KitDimFitness.BLTests.csproj", "{CF9F8F49-5150-4340-8C2C-330E63E17DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitDimFitness.BLTests", "KitDimFitness.BLTests\KitDimFitness.BLTests.csproj", "{CF9F8F49-5150-4340-8C2C-330E63E17DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

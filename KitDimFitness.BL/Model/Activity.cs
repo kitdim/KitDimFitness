@@ -5,6 +5,7 @@ namespace KitDimFitness.BL.Model
     [Serializable]
     public class Activity
     {
+        public int Id { get; set; }
         public string Name { get; }
         public double CaloriesPerMinute { get; }
         public Activity(string name, double caloriesPerMinute)
