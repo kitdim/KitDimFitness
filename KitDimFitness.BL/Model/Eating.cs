@@ -9,9 +9,10 @@ namespace KitDimFitness.BL.Model
     public class Eating
     {
         public int Id { get; set; }
-        public DateTime Moment { get; }
-        public Dictionary<Food, double> Foods { get; }
-        public User User { get; }
+        public DateTime Moment { get; set; }
+        public Dictionary<Food, double> Foods { get; set; }
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
 
         public Eating(User user)
         {

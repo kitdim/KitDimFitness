@@ -6,7 +6,7 @@ namespace KitDimFitness.BL.Model
     public class User
     {
         public int Id { get; set; }
-        public string Name { get; }
+        public string Name { get; set; }
         public Gender Gender { get; set; }
         public DateTime BirthDate { get; set; }
         public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }

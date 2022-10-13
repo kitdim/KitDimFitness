@@ -12,7 +12,7 @@ namespace KitDimFitness.BL.Model
         /// <summary>
         /// Название.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; set; }
         /// <summary>
         /// Создать новый пол.
         /// </summary>
