@@ -10,7 +10,7 @@ namespace KitDimFitness.BL.Controller
 {
     public class FitnessContext : DbContext
     {
-        public FitnessContext() : base("data source=(localdb)\\MSSQLLocalDB;Initial Catalog=fitness;Integrated Security=True") {}
+        public FitnessContext() : base(@"Server=(localdb)\mssqllocaldb;Database=kitfitness;Trusted_Connection=True;") {}
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Eating> Eatings { get; set; }
         public DbSet<Exercise> Exercises { get; set; }

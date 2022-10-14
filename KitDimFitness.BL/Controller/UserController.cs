@@ -8,7 +8,7 @@ namespace KitDimFitness.BL.Controller
     /// <summary>
     /// Контроллер пользователя приложения.
     /// </summary>
-    public class UserController : ControllerBase
+    public class UserController : ControllerBase<User>
     {
         private const string USERS_FILE_NAME = "users.dat";
         /// <summary>
@@ -50,7 +50,7 @@ namespace KitDimFitness.BL.Controller
         /// </summary>
         public void Save()
         {
-            Save(USERS_FILE_NAME, Users);
+            
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace KitDimFitness.BL.Controller
         /// <returns></returns>
         private List<User> GetUsersData()
         {
-            return Load<List<User>>(USERS_FILE_NAME);
+            return Load();
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)

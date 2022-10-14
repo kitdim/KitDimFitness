@@ -1,17 +1,25 @@
-﻿using System;
+﻿using KitDimFitness.BL.Model;
+using System;
 
 namespace KitDimFitness.BL.Controller
 {
-    class DatabaseDataSaver : IDataSaver
+    class DatabaseDataSaver<T> : IDataSaver<T> where T : class
     {
-        public T Load<T>(string fileName) 
+        public List<T> Load()
         {
-            
-        }
-
-        public void Save(string fileName, object item)
+            using (var db = new FitnessContext())
+            {
+                var result = db.Set<T>().Where(l => true).ToList();
+                return result;
+            }
+        }        
+        public void Save(T item)
         {
-            throw new NotImplementedException();
+            using (var db = new FitnessContext())
+            {
+                db.Set<T>().Add(item);
+                db.SaveChanges();
+            }
         }
     }
 }

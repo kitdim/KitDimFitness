@@ -3,7 +3,7 @@ using System;
 
 namespace KitDimFitness.BL.Controller
 {
-    public class ExerciseController : ControllerBase
+    public class ExerciseController : ControllerBase<Exercise>
     {
         private readonly User user;
         private const string EXERCISES_FILE_NAME = "exercises.dat";
@@ -37,6 +37,7 @@ namespace KitDimFitness.BL.Controller
             }
             Save();
         }
+
         private List<Exercise> GetAllExercises()
         {
             return Load<List<Exercise>>(EXERCISES_FILE_NAME) ?? new List<Exercise>();
