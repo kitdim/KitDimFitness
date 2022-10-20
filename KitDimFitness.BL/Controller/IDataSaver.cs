@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KitDimFitness.BL.Controller
 {
-    public interface IDataSaver<T> where T : class
+    public interface IDataSaver
     {
-        void Save(T item);
-        List<T> Load();
+        void Save<T>(List<T> item) where T : class;
+        List<T> Load<T>() where T : class;
     }
 }

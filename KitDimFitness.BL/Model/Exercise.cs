@@ -12,6 +12,7 @@ namespace KitDimFitness.BL.Model
         public virtual Activity Activity { get; set; }
         public int UserId { get; set; }
         public virtual User User { get; set; }
+        public Exercise() { }
 
         public Exercise(DateTime start, DateTime finish, Activity activity, User user)
         {

@@ -2,12 +2,12 @@
 
 namespace KitDimFitness.BL.Controller
 {
-    public class SerializeDataSaver<T> : IDataSaver<T> where T : class
+    public class SerializeDataSaver : IDataSaver
     {
-        public List<T> Load()
+        public List<T> Load<T>() where T : class
         {
             var formatter = new BinaryFormatter();
-            var fileName = typeof(T) + ".dat";
+            var fileName = typeof(T).Name;
 
             using (var fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
@@ -22,10 +22,10 @@ namespace KitDimFitness.BL.Controller
             }
         }
 
-        public void Save(T item)
+        public void Save<T>(List<T> item) where T : class
         {
             var formatter = new BinaryFormatter();
-            var fileName = typeof(T) + ".dat";
+            var fileName = typeof(T).Name;
 
             using (var fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
